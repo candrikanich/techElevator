@@ -1,0 +1,454 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Assistant', sans-serif;
+}
+
+body {
+	background: #ccc url("img/light_grey.png") repeat fixed;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Exo', sans-serif;
+}
+
+h3 {
+	margin: 30px 0 10px 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#page {
+	width: 1024px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+
+header {
+	background: #000 url("img/glacier-header.jpg") no-repeat 0 -200px;
+	overflow: hidden;
+	padding: 20px;
+	color: #fff;
+}
+
+header img {
+	margin: 20px;
+	float: left;
+}
+
+header h1 {
+	display: inline-block;
+	margin: 60px 0 0 0;
+	font-size: 2.0em;
+}
+header p {
+	font-size: 1.4em;
+}
+
+nav {
+	background-color: #ccc;
+	clear: both;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+}
+
+nav ul, 
+#parkListing ul, 
+#parkDetail ul {
+	list-style: none;	
+	overflow: hidden;
+}
+
+nav ul li {
+	/* display: inline-block; */
+	float: left;
+	padding: 15px 0;
+}
+
+nav ul li a {
+	text-decoration: none;
+	padding: 15px 20px;
+	border-right: 1px solid #999;
+	margin: 0;
+}
+
+nav ul li a:hover {
+	color: #fff;
+	background-color: #999;	
+}
+
+/* ***** PARK LISTING PAGE - parkListing.jsp ***** */
+
+#parkListing {
+	padding: 20px;
+}
+
+#parkListing header {
+	background: none;
+	color: #000;
+	width: 100%;
+}
+
+#parkListing header h2 {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+
+.parkListing {
+	width: 469px;
+	margin: 20px 20px 20px 0;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	height: 450px;
+	overflow: hidden;
+	float: left;
+	padding: 0 0 20px 0;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.parkListing:hover {
+	border: 1px solid #333;
+	background-color: #f2f2f2;
+}
+
+.parkListing img {
+	width: 100%;
+	margin: 0 0 15px 0;
+}
+
+.parkListing h3 {
+	display: inline-block;
+	margin: 0 0 10px 10px;
+	font-size: 1.2em;
+}
+
+.parkLocation:before { 
+    content: " - ";
+    font-weight: normal;
+}
+
+p.parkLocation {
+	display: inline;
+	font-weight: normal;
+	margin: 0 10px 0 0;
+}
+
+#parkListing p.parkSummary {
+	margin: 10px 10px 20px 10px;
+	text-overflow: ellipsis;
+	font-size: 0.9em;
+}
+
+
+/* ***** PARK DETAIL PAGE - parkDetail.jsp ***** */
+
+#parkDetail, #fiveDayForecast, #weatherTips, #todaysWeather {
+	padding: 20px;
+}
+
+#fiveDayForecast {
+	margin: 30px 0 20px 0;
+	clear:both;
+}
+
+#parkDetail header {
+	width: 41%;
+	float: left;
+	background: none;
+	color: #000;
+}
+#parkDetail h2 {
+	display: inline;
+}
+
+#parkDetail ul {
+	margin: 20px 0;
+}
+
+ul li span {
+	display: inline-block;
+	width: 90px;
+	font-weight : bold;
+	text-align: right;
+	margin-right: 10px;
+}
+
+img.parkImage {
+ 	float: right; 
+ 	margin: 0 0 20px 40px;
+ 	box-shadow: 2px 2px 3px #999;
+}
+
+blockquote {
+ 	margin: 0 30px 0 20px;
+ 	color: #666;
+ 	font-style: italic;
+ 	padding: 20px;
+ 	text-align: center;
+}
+
+#parkDetail p.parkSummary {
+	line-height: 1.3em;
+	/* width: 43%; */
+}
+
+/* table#byTheNumbers, */ 
+#fiveDayForecast table {
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+}
+
+table#byTheNumbers {
+	/* border-bottom: 1px solid #ccc; */
+}
+
+table#byTheNumbers thead td {
+	font-weight: bold;
+	font-size: 0.8em;
+	color: #000;
+	padding: 10px 0 0 0;
+}
+
+.cellOne, .cellTwo, .cellThree, .cellFour, .cellFive, .cellSix {
+	font-weight: bold;
+	font-size: 2.0em;
+	font-family: 'Exo', sans-serif;
+}
+
+.cellOne {
+	color: red;
+}
+
+.cellTwo {
+	color: blue;
+}
+
+.cellThree {
+	color: green;
+}
+
+.cellFour {
+	color: orange;
+}
+
+.cellFive {
+	color: purple;
+}
+
+.cellSix {
+	color: yellow;
+}
+
+table#byTheNumbers td {
+	border-right: 1px solid #ccc;
+	width: 165px;
+	padding: 0 0 10px 0 ;
+	text-align: center;
+}
+
+#byTheNumbers td:last-child {
+	border: none;
+}
+
+#fiveDayForecast table td {
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	width: 195px;
+	text-align: center;
+}
+
+#fiveDayForecast table tr:first-child td {
+	background-color: #ccc;
+	font-weight: bold;
+	padding: 8px 0;
+}
+
+#fiveDayForecast table tr:last-child td {
+	padding: 25px 0;
+}
+
+#todaysWeather h4, #weatherTips h4 {
+	display: inline-block;
+	margin: 0 0 10px 0;
+}
+
+#todaysWeather h5 {
+	font-weight: normal;
+	font-family: 'Assistant', sans-serif;
+	text-transform: capitalize;
+	font-size: 1.3em;
+	margin: 0 0 10px 0;
+}
+
+#todaysWeather input[type="submit"] {
+	display: inline-block;
+	margin: 15px 0;
+	background-color: #990000;
+	color: #fff;
+	border: 1px solid #999;
+	padding: 5px 10px;
+	border-radius: 5px;
+	font-weight: normal; 
+	font-size: 1.0em;
+}
+
+#todaysWeather img {
+	width: 150px;
+	float: left;
+	margin: 0 10px 0;
+}
+
+#fiveDayForecast img {
+	width: 80%;
+	margin: 0 auto;
+}
+#fiveDayForecast p.forecast {
+	text-transform: capitalize;
+	font-weight: bold;
+}
+
+#todaysWeather, #weatherTips {
+	width: 41.5%;
+	/* display: inline-block; */
+	margin: 20px;
+	padding: 10px 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	height: 150px;
+}
+
+#todaysWeather {
+	float: left;
+}
+
+#weatherTips {
+	float: right;
+}
+
+#weatherTips {
+	background-color: #e5e5e5;
+}
+
+/* ***** SURVEY PAGE - dailySurveyInput.jsp ***** */
+
+#addSurvey {
+	padding: 20px;
+}
+
+#addSurvey h2 {
+	margin: 20px 0 20px 0;
+}
+
+#addSurvey form {
+	display: inline-block;
+}
+
+#addSurvey button {
+	padding: 10px;
+	border: 1px solid #999;
+	border-radius: 5px;
+	margin: 20px;
+	background-color: #f2f2f2;
+	box-shadow: 2px 2px 3px #999;
+}
+
+#addSurvey button:hover {
+	border: 1px solid #000;
+	background-color: #ccc;
+}
+
+#addSurvey img {
+	width: 181px;
+}
+
+#addSurvey p {
+	margin: 5px 0;
+	font-size: 1.0em;
+	word-wrap: break-word;
+}
+
+#addSurvey table {
+	width: 100%;
+	border-top: 1px solid #ccc;
+}
+
+#addSurvey td:first-child {
+	width: 300px;
+	padding: 5px 10px;
+	text-align: right;
+	font-weight: bold;
+}
+
+#addSurvey td {
+	border-bottom: 1px solid #ccc;
+}
+
+#addSurvey td div.surveyNum {
+	width: 20px;
+	background-color: blue;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+#addSurvey td div.surveyNum:last-child {
+	margin: 0 10px 0 0;
+}
+
+#addSurvey td div.ynp2 {
+	background-color: green;
+}
+
+#addSurvey td div.gnp {
+	background-color: orange;
+}
+
+#addSurvey td div.gcnp {
+	background-color: red;
+}
+
+#addSurvey td div.gtnp {
+	background-color: blue;
+}
+
+#addSurvey td div.mrnp {
+	background-color: purple;
+}
+
+#addSurvey td div.gsmnp {
+	background-color: aqua;
+}
+
+#addSurvey td div.enp {
+	background-color: magenta;
+}
+
+#addSurvey td div.ynp {
+	background-color: gray;
+}
+
+#addSurvey td div.cvnp {
+	background-color: pink;
+}
+
+#addSurvey td div.rmnp {
+	background-color: cyan;
+}
+
+/* ***** FOOTER PAGE - dailySurveyInput.jsp ***** */
+footer {
+	clear: both;
+	background-color: #ccc;
+	padding: 10px;
+	text-align: center;
+	margin: 20px 0 0 0;
+}
